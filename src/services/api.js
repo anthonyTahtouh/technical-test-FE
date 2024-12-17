@@ -2,9 +2,6 @@ import axios from 'axios';
 
 const API = axios.create({
   baseURL: 'https://46.101.252.244/api',
-  httpsAgent: new (require('https').Agent)({
-    rejectUnauthorized: false, // Accept self-signed certificates
-  }),
 });
 
 API.interceptors.request.use((req) => {
